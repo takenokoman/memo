@@ -1,0 +1,21 @@
+header {
+}
+
+header a {
+  color: white;
+  margin: auto 20px;
+
+}
+
+.thread-li a {
+  color: black;
+  font-size: 25px;
+  width: 100%;
+}
+
+li {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  list-style: none;
+  background-color: rgba(50,50, 120, 0.1);

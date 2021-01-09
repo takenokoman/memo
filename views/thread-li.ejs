@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>リスト</title>
+    <link rel="stylesheet" href="/css/master.css">
+    <link rel="stylesheet" href="/css/thread-li.css">
+  </head>
+  <body>
+    <% threads.forEach((thread) => { %>
+      <li>
+        <a href="/threadPage/<%= thread.thread_id %>" target="_parent"><%= thread.title %></a>
+        <p>カテゴリ: <%= thread.category %></p>
+        <p>スレ主: <%= thread.owner %></p>
+        <p>作成日時: <%= thread.created_at %></p>
+      </li>
+    <% }); %>
+
+  </body>
+</html>

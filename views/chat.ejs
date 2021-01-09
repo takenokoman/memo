@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>チャット</title>
+    <link rel="stylesheet" href="/css/master.css">
+    <link rel="stylesheet" href="/css/chat.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  </head>
+  <body>
+    <header>
+      <h1>MEMO</h1>
+      <a href="/logout">ログアウト</a>
+      <a href="/user">スレ一覧へ</a>
+    </header>
+    <main>
+      <ul id="chat-li">
+        <% if(typeof chatLog == 'undefined') { %>
+          <p>コメントはありません。</p>
+        <% } else { %>
+        <% chatLog.forEach((chat) => { %>
+          <li>
+            <%= chat.text %>
+          </li>
+          <span><%= chat.user_name %></span>
+        <% }); %>
+        <% } %>
+      </ul>
+    </main>
+    <footer>
+      <form id="frm" class="sub-form">
+        <input id="msg" class="text" type="text">
+        <input class="submit fas fa-paper-plane" value="&#xf1d8;" type="submit">
+      </form>
+    </footer>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="js/chat.js"></script>
+  </body>
+</html>

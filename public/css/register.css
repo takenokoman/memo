@@ -1,0 +1,66 @@
+header a {
+  color: white;
+  margin: auto 20px;
+}
+
+.form-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  max-width: 800px;
+  margin: 100px auto;
+}
+
+.form-wrap p {
+  color: white;
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.register-form * {
+  margin: 10px;
+}
+
+label {
+  display: inline-block;
+  width: 30%;
+}
+
+input {
+  width: 60%;
+  border-style: none;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.submit-btn {
+  position: absolute;
+  right: 0;
+  width: 50px;
+  margin-top: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/

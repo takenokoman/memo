@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/master.css">
+    <link rel="stylesheet" href="/css/user.css">
+  </head>
+  <body>
+    <header>
+      <h1>MEMO</h1>
+      <a href="/logout">ログアウト</a>
+      <a href="/chat">チャット</a>
+    </header>
+    <div class="">
+      <p>こんにちは、<%= userName %>さん</p>
+    </div>
+    <div class="">
+      <form class="" action="/createThread" method="post">
+        <h3>スレッドを作成する</h3>
+        <label for="title">タイトル</label>
+        <input id="title" type="text" name="title" value="">
+        <label for="category">カテゴリ</label>
+        <select id="category" class="" name="category">
+          <option value="">選択してください</option>
+          <option value="エンタメ">エンタメ</option>
+          <option value="政治">政治</option>
+          <option value="スポーツ">スポーツ</option>
+          <option value="音楽">音楽</option>
+          <option value="アニメ">アニメ</option>
+          <option value="ゲーム">ゲーム</option>
+          <option value="テクノロジー">テクノロジー</option>
+          <option value="雑学">雑学</option>
+        </select>
+        <input type="submit" name="" value="作成">
+      </form>
+    </div>
+    <div class="thread-li">
+      <h3>スレッド一覧</h3>
+      <iframe src="/list" width="100%" height="900px"></iframe>
+    </div>
+  </body>
+</html>

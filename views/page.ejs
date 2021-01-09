@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/master.css">
+  </head>
+  <body>
+    <header>
+      <h1>MEMO</h1>
+      <a href="/logout">ログアウト</a>
+      <a href="/user">一覧へ</a>
+    </header>
+    <div class="">
+      <h2><%= title %></h2>
+      <p>カテゴリ: <%= thread.category %></p>
+      <p>スレ主: <%= thread.owner %></p>
+      <p>作成日時: <%= thread.created_at %></p>
+    </div>
+    <div class="res-form">
+      <form class="" action="/res/<%= thread.thread_id %>" method="post">
+        <input type="text" name="res" value="">
+        <input type="submit" name="" value="書き込む">
+      </form>
+    </div>
+    <div class="res-list">
+      <% if(typeof reses == 'undefined') { %>
+        <p>コメントはありません。</p>
+      <% } else { %>
+      <% let i = 1; %>
+        <ul>
+          <% reses.forEach((res) => { %>
+            <li>
+              <p>
+                <%= i %>:<%= res.user_name %>:<%= res.created_at %>
+              </p>
+              <p><%= res.res_text %></p>
+            </li>
+          <% i++; %>
+          <% }); %>
+        </ul>
+      <% } %>
+    </div>
+    <div class="res-form">
+      <form class="" action="/res/<%= thread.thread_id %>" method="post">
+        <input type="text" name="res" value="">
+        <input type="submit" name="" value="書き込む">
+      </form>
+    </div>
+  </body>
+</html>

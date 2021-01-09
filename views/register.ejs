@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/master.css">
+    <link rel="stylesheet" href="/css/register.css">
+  </head>
+  <body>
+    <header>
+      <h1>MEMO</h1>
+      <a href="/">ログイン画面へ</a>
+    </header>
+    <div class="form-wrap">
+      <h2>新規登録</h2>
+      <form class="register-form" action="/register" method="post">
+        <label for="user_name">名前</label>
+        <input id="user_name" type="text" name="user_name" required="required">
+        <hr>
+        <label for="email">メールアドレス</label>
+        <input id="email" type="email" name="email" required="required">
+        <% if (!(typeof emailExists === 'undefined')) { %>
+        <p><%= emailExists %></p>
+        <% } %>
+        <hr>
+        <label for="pass">パスワード</label>
+        <input id="pass" type="password" name="pass" required="required">
+        <hr>
+        <label for="pass_check">パスワード(確認)</label>
+        <input id="pass_check" type="password" name="pass_check" required="required">
+        <hr>
+        <input class="submit-btn" type="submit" name="" value="送信">
+      </form>
+    </div>
+  </body>
+</html>

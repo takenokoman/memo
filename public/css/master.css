@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  background-color: rgba(50,50, 120, 1);
+  display: flex;
+}
+
+header h1 {
+  margin: auto 20px;
+  color: white;
+  font-weight: normal;
+}
+
+header a {
+  color: white;
+  margin: auto 20px;
+
+}
